@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026 - Bangladesh Time Schedule</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4D03F;
+            --gold-dark: #B8860B;
+            --deep-blue: #0B1120;
+            --navy: #0F1B2E;
+            --navy-light: #1A2A42;
+            --slate: #2D3748;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --accent-red: #DC2626;
+            --accent-green: #16A34A;
+            --card-bg: rgba(15, 27, 46, 0.85);
+            --card-border: rgba(212, 175, 55, 0.15);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F4D03F 50%, #B8860B 100%);
+            --gradient-dark: linear-gradient(180deg, #0B1120 0%, #0F1B2E 100%);
+            --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.15);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--deep-blue);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ===== ANIMATED BACKGROUND ===== */
+        .bg-animation {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            background: var(--deep-blue);
+            overflow: hidden;
+        }
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 80%, rgba(212, 175, 55, 0.02) 0%, transparent 50%);
+            animation: bgFloat 20s ease-in-out infinite;
+        }
+        @keyframes bgFloat {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-2%, 2%) rotate(1deg); }
+            66% { transform: translate(2%, -1%) rotate(-1deg); }
+        }
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            animation: orbFloat 15s ease-in-out infinite;
+        }
+        .orb-1 { width: 400px; height: 400px; top: 10%; left: 10%; }
+        .orb-2 { width: 300px; height: 300px; top: 60%; right: 15%; animation-delay: -5s; }
+        .orb-3 { width: 250px; height: 250px; bottom: 20%; left: 40%; animation-delay: -10s; }
+        @keyframes orbFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+        .particles {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: particleFloat 8s ease-in-out infinite;
+        }
+        @keyframes particleFloat {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            25% { transform: translateY(-20px) translateX(10px); opacity: 0.6; }
+            50% { transform: translateY(-40px) translateX(-10px); opacity: 0.3; }
+            75% { transform: translateY(-20px) translateX(5px); opacity: 0.5; }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--deep-blue); }
+        ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(11, 17, 32, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+        }
+        header.scrolled { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 45px; height: 45px;
+            background: var(--gradient-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--deep-blue);
+            box-shadow: var(--shadow-gold);
+            transition: transform 0.3s ease;
+        }
+        .logo:hover .logo-icon { transform: rotate(360deg); }
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+        .logo-text span { color: var(--gold); }
+        .bd-badge {
+            background: rgba(0, 106, 77, 0.2);
+            border: 1px solid rgba(0, 106, 77, 0.4);
+            color: #00C896;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        nav { display: flex; gap: 2rem; }
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gradient-gold);
+            transition: width 0.3s ease;
+        }
+        nav a:hover { color: var(--gold); }
+        nav a:hover::after { width: 100%; }
+        nav a.active { color: var(--gold); }
+        nav a.active::after { width: 100%; }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 2rem 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        .hero-badge i { color: var(--gold-light); }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        .hero h1 .year {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.2);
+        }
+        .stat-item:last-child::after { display: none; }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+        .stat-item:hover .stat-number { transform: scale(1.1); }
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        .scroll-indicator i {
+            font-size: 1.5rem;
+            color: var(--gold);
+            opacity: 0.6;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease 0.1s both;
+        }
+        .section-desc {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+
+        /* ===== HOST NATIONS ===== */
+        .host-nations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .host-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .host-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .host-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-gold), var(--shadow-card);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        .host-card:hover::before { transform: scaleX(1); }
+        .host-card .shine {
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: left 0.5s ease;
+        }
+        .host-card:hover .shine { left: 100%; }
+        .host-flag { font-size: 3rem; margin-bottom: 1rem; transition: transform 0.3s ease; }
+        .host-card:hover .host-flag { transform: scale(1.2); }
+        .host-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .host-cities {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .host-stadiums {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .stadium-tag {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gold);
+            transition: all 0.3s ease;
+        }
+        .stadium-tag:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* ===== SORTED MATCH LIST ===== */
+        .match-list-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        .match-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .match-list-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .match-list-controls {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .control-btn {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .control-btn:hover, .control-btn.active {
+            background: var(--gradient-gold);
+            color: var(--deep-blue);
+            border-color: transparent;
+        }
+        .search-box {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        .search-box input::placeholder { color: var(--text-muted); }
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+        .match-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+        .match-list-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: fadeIn 0.5s ease;
+        }
+        .match-list-item:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateX(5px);
+        }
+        .match-list-item.highlighted {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+        }
+        .match-list-num {
+            min-width: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .match-list-datetime {
+            min-width: 140px;
+            display: flex;
+            flex-direction: column;
+        }
+        .match-list-date {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+        .match-list-time {
+            font-size: 0.75rem;
+            color: var(--gold);
+        }
+        .match-list-teams {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .match-list-vs {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .match-list-group {
+            min-width: 60px;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .match-list-venue {
+            min-width: 160px;
+            text-align: right;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+        .match-list-count {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        .match-list-count span { color: var(--gold); font-weight: 700; }
+
+        /* ===== GROUP STAGE ===== */
+        .groups-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 1.5rem;
+        }
+        .group-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .group-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-card);
+        }
+        .group-header {
+            background: var(--gradient-gold);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .group-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--deep-blue);
+        }
+        .group-teams { display: flex; }
+        .team-mini {
+            width: 32px; height: 32px;
+            background: var(--deep-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            margin-left: -8px;
+            transition: transform 0.3s ease;
+        }
+        .team-mini:first-child { margin-left: 0; }
+        .group-card:hover .team-mini { transform: scale(1.1); }
+        .group-matches { padding: 1rem 1.5rem; }
+        .match-row {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+        .match-row:hover { background: rgba(212, 175, 55, 0.03); margin: 0 -1.5rem; padding: 0.75rem 1.5rem; }
+        .match-row:last-child { border-bottom: none; }
+        .match-date {
+            min-width: 90px;
+            font-weight: 600;
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+        .match-time {
+            min-width: 70px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        .match-teams {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .match-vs {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .match-venue {
+            min-width: 140px;
+            text-align: right;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+
+        /* ===== KNOCKOUT STAGE ===== */
+        .knockout-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .knockout-round {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        .knockout-round-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .knockout-round-title i { color: var(--gold); font-size: 1.2rem; }
+        .knockout-matches {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1rem;
+        }
+        .knockout-match {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .knockout-match:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+        }
+        .knockout-match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        .knockout-match-num {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 2px 10px;
+            border-radius: 4px;
+        }
+        .knockout-match-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .knockout-teams {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .knockout-venue {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .knockout-venue i { color: var(--gold); font-size: 0.7rem; }
+
+        /* ===== FINALS SECTION ===== */
+        .finals-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .final-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .final-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold);
+        }
+        .final-card.highlight {
+            border-color: rgba(212, 175, 55, 0.4);
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, var(--card-bg) 100%);
+        }
+        .final-icon {
+            width: 60px; height: 60px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: var(--deep-blue);
+            transition: transform 0.3s ease;
+        }
+        .final-card:hover .final-icon { transform: rotate(360deg) scale(1.1); }
+        .final-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .final-date {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .final-teams {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .final-venue { color: var(--text-muted); font-size: 0.85rem; }
+
+        /* ===== VENUES MAP ===== */
+        .venues-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .venue-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .venue-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+        .venue-img {
+            height: 160px;
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--slate) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .venue-card:hover .venue-img { background: linear-gradient(135deg, var(--slate) 0%, var(--navy-light) 100%); }
+        .venue-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60%;
+            background: linear-gradient(to top, var(--card-bg), transparent);
+        }
+        .venue-info { padding: 1.5rem; }
+        .venue-name { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .venue-city { color: var(--gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .venue-capacity { color: var(--text-muted); font-size: 0.8rem; }
+
+        /* ===== FILTER TABS ===== */
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-tab:hover, .filter-tab.active {
+            background: var(--gradient-gold);
+            color: var(--deep-blue);
+            border-color: transparent;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px; top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateX(5px);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px; top: 24px;
+            width: 12px; height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+            border: 3px solid var(--deep-blue);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover::before {
+            transform: scale(1.3);
+            box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.2);
+        }
+        .timeline-date {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .timeline-desc { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* ===== COUNTDOWN TIMER ===== */
+        .countdown-section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .countdown-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .countdown-box {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            min-width: 100px;
+        }
+        .countdown-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px; height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: var(--shadow-gold);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--navy);
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .footer-content { max-width: 1400px; margin: 0 auto; }
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .footer-logo span { color: var(--gold); }
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .social-link {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            background: var(--gradient-gold);
+            color: var(--deep-blue);
+            border-color: transparent;
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            border-top: 1px solid var(--card-border);
+            padding-top: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .finals-section { grid-template-columns: 1fr; }
+            .groups-grid { grid-template-columns: 1fr; }
+            .match-list-item { flex-wrap: wrap; gap: 0.5rem; }
+            .match-list-venue { text-align: left; min-width: auto; }
+        }
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-stats { gap: 2rem; }
+            .stat-item::after { display: none; }
+            .stat-number { font-size: 2rem; }
+            section { padding: 60px 1.5rem; }
+            .knockout-matches { grid-template-columns: 1fr; }
+            .host-nations { grid-template-columns: 1fr; }
+            .venues-grid { grid-template-columns: 1fr; }
+            .countdown-timer { gap: 1rem; }
+            .countdown-box { padding: 1rem; min-width: 70px; }
+            .countdown-value { font-size: 1.8rem; }
+            .match-list-header { flex-direction: column; align-items: flex-start; }
+            .match-list-controls { width: 100%; }
+            .match-list-datetime { min-width: 100px; }
+            .match-list-venue { display: none; }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s ease;
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s ease;
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease;
+        }
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Loading animation */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px; height: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--gold);
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+        }
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-5px);
+            background: var(--navy);
+            color: var(--gold);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid var(--card-border);
+        }
+        .tooltip:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        @media print {
+            .bg-animation, header, .scroll-indicator, footer, .back-to-top, .countdown-section { display: none; }
+            body { background: white; color: black; }
+            .group-card, .knockout-match, .final-card, .venue-card, .host-card, .match-list-item {
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+    </div>
+    <div class="particles" id="particles"></div>
+
+    <header id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-futbol"></i></div>
+                <div class="logo-text">WC <span>2026</span></div>
+            </a>
+            <span class="bd-badge"><i class="fas fa-clock"></i> Bangladesh Time (BST)</span>
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#groups">Groups</a>
+                <a href="#knockout">Knockout</a>
+                <a href="#finals">Finals</a>
+                <a href="#venues">Venues</a>
+                <a href="#timeline">Timeline</a>
+            </nav>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <section class="hero" id="overview">
+        <div class="hero-badge">
+            <i class="fas fa-calendar-alt"></i>
+            June 11 - July 19, 2026
+        </div>
+        <h1>
+            FIFA World Cup<br>
+            <span class="year">2026</span>
+        </h1>
+        <p class="hero-subtitle">
+            The biggest tournament in football history. 48 nations, 104 matches, 3 host countries across North America.
+            All times shown in Bangladesh Standard Time (BST, UTC+6).
+        </p>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number" data-count="48">0</div>
+                <div class="stat-label">Teams</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="104">0</div>
+                <div class="stat-label">Matches</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="16">0</div>
+                <div class="stat-label">Stadiums</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="3">0</div>
+                <div class="stat-label">Countries</div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('hosts').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="hosts">
+        <div class="section-header reveal">
+            <div class="section-tag">Host Nations</div>
+            <h2 class="section-title">United We Play</h2>
+            <p class="section-desc">Three nations, one tournament. The 2026 World Cup will be hosted across the United States, Canada, and Mexico.</p>
+        </div>
+        <div class="host-nations">
+            <div class="host-card reveal">
+                <div class="shine"></div>
+                <div class="host-flag">&#x1F1FA;&#x1F1F8;</div>
+                <div class="host-name">United States</div>
+                <div class="host-cities">11 Cities - 11 Stadiums</div>
+                <div class="host-stadiums">
+                    <span class="stadium-tag">SoFi Stadium</span>
+                    <span class="stadium-tag">MetLife Stadium</span>
+                    <span class="stadium-tag">AT&amp;T Stadium</span>
+                    <span class="stadium-tag">Lumen Field</span>
+                    <span class="stadium-tag">Levi&#39;s Stadium</span>
+                    <span class="stadium-tag">Gillette Stadium</span>
+                    <span class="stadium-tag">Lincoln Financial Field</span>
+                    <span class="stadium-tag">NRG Stadium</span>
+                    <span class="stadium-tag">Arrowhead Stadium</span>
+                    <span class="stadium-tag">Mercedes-Benz Stadium</span>
+                    <span class="stadium-tag">Hard Rock Stadium</span>
+                </div>
+            </div>
+            <div class="host-card reveal">
+                <div class="shine"></div>
+                <div class="host-flag">&#x1F1E8;&#x1F1E6;</div>
+                <div class="host-name">Canada</div>
+                <div class="host-cities">2 Cities - 2 Stadiums</div>
+                <div class="host-stadiums">
+                    <span class="stadium-tag">BC Place</span>
+                    <span class="stadium-tag">BMO Field</span>
+                </div>
+            </div>
+            <div class="host-card reveal">
+                <div class="shine"></div>
+                <div class="host-flag">&#x1F1F2;&#x1F1FD;</div>
+                <div class="host-name">Mexico</div>
+                <div class="host-cities">3 Cities - 3 Stadiums</div>
+                <div class="host-stadiums">
+                    <span class="stadium-tag">Estadio Azteca</span>
+                    <span class="stadium-tag">Estadio Akron</span>
+                    <span class="stadium-tag">Estadio BBVA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section id="countdown">
+        <div class="section-header reveal">
+            <div class="section-tag">Countdown</div>
+            <h2 class="section-title">Time Until Kickoff</h2>
+            <p class="section-desc">The opening match is approaching. Here is how much time is left.</p>
+        </div>
+        <div class="countdown-section reveal">
+            <div class="countdown-title">Opening Match: Mexico vs South Africa</div>
+            <div class="countdown-timer" id="countdownTimer">
+                <div class="countdown-box">
+                    <div class="countdown-value" id="days">0</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="hours">0</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="minutes">0</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="seconds">0</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SORTED MATCH LIST -->
+    <section id="all-matches">
+        <div class="section-header reveal">
+            <div class="section-tag">Complete Schedule</div>
+            <h2 class="section-title">All Matches by Date</h2>
+            <p class="section-desc">Every single match of the tournament, sorted chronologically by Bangladesh time.</p>
+        </div>
+        <div class="match-list-container reveal">
+            <div class="match-list-header">
+                <div class="match-list-title"><i class="fas fa-list-ol" style="color:var(--gold); margin-right:8px;"></i>Match List</div>
+                <div class="match-list-controls">
+                    <button class="control-btn active" onclick="filterMatchList('all')">All</button>
+                    <button class="control-btn" onclick="filterMatchList('group')">Group Stage</button>
+                    <button class="control-btn" onclick="filterMatchList('knockout')">Knockout</button>
+                    <button class="control-btn" onclick="sortMatchList('date')">By Date</button>
+                    <button class="control-btn" onclick="sortMatchList('group')">By Group</button>
+                </div>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="matchSearch" placeholder="Search teams, venues, or dates..." oninput="searchMatches()">
+            </div>
+            <div class="match-list" id="matchList">
+                <!-- All 72 group stage matches + 32 knockout matches will be populated by JS -->
+            </div>
+            <div class="match-list-count">Showing <span id="matchCount">0</span> matches</div>
+        </div>
+    </section>
+
+    <section id="groups">
+        <div class="section-header reveal">
+            <div class="section-tag">Group Stage</div>
+            <h2 class="section-title">The Journey Begins</h2>
+            <p class="section-desc">12 groups of 4 teams. Top 2 from each group plus 8 best third-placed teams advance to the knockout stage.</p>
+        </div>
+        <div class="filter-tabs reveal">
+            <button class="filter-tab active" onclick="filterGroups('all')">All Groups</button>
+            <button class="filter-tab" onclick="filterGroups('A-D')">Groups A-D</button>
+            <button class="filter-tab" onclick="filterGroups('E-H')">Groups E-H</button>
+            <button class="filter-tab" onclick="filterGroups('I-L')">Groups I-L</button>
+        </div>
+
+        <div class="groups-grid" id="groupsGrid">
+            <!-- Group A -->
+            <div class="group-card reveal" data-group="A-D">
+                <div class="group-header">
+                    <span class="group-letter">Group A</span>
+                    <div class="group-teams">
+                        <span class="team-mini">MX</span>
+                        <span class="team-mini">ZA</span>
+                        <span class="team-mini">KR</span>
+                        <span class="team-mini">CZ</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 12</span><span class="match-time">1:00 AM</span><span class="match-teams">Mexico <span class="match-vs">vs</span> South Africa</span><span class="match-venue">Estadio Azteca</span></div>
+                    <div class="match-row"><span class="match-date">Jun 12</span><span class="match-time">8:00 AM</span><span class="match-teams">South Korea <span class="match-vs">vs</span> Czechia</span><span class="match-venue">Estadio Akron</span></div>
+                    <div class="match-row"><span class="match-date">Jun 19</span><span class="match-time">12:00 AM</span><span class="match-teams">Czechia <span class="match-vs">vs</span> South Africa</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 19</span><span class="match-time">7:00 AM</span><span class="match-teams">Mexico <span class="match-vs">vs</span> South Korea</span><span class="match-venue">Estadio Akron</span></div>
+                    <div class="match-row"><span class="match-date">Jun 25</span><span class="match-time">7:00 AM</span><span class="match-teams">Czechia <span class="match-vs">vs</span> Mexico</span><span class="match-venue">Estadio Azteca</span></div>
+                    <div class="match-row"><span class="match-date">Jun 25</span><span class="match-time">7:00 AM</span><span class="match-teams">South Africa <span class="match-vs">vs</span> South Korea</span><span class="match-venue">Estadio BBVA</span></div>
+                </div>
+            </div>
+
+            <!-- Group B -->
+            <div class="group-card reveal" data-group="A-D">
+                <div class="group-header">
+                    <span class="group-letter">Group B</span>
+                    <div class="group-teams">
+                        <span class="team-mini">CA</span>
+                        <span class="team-mini">BA</span>
+                        <span class="team-mini">QA</span>
+                        <span class="team-mini">CH</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 13</span><span class="match-time">1:00 AM</span><span class="match-teams">Canada <span class="match-vs">vs</span> Bosnia &amp; Herz.</span><span class="match-venue">BMO Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 14</span><span class="match-time">1:00 AM</span><span class="match-teams">Qatar <span class="match-vs">vs</span> Switzerland</span><span class="match-venue">Levi&#39;s Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 19</span><span class="match-time">1:00 AM</span><span class="match-teams">Switzerland <span class="match-vs">vs</span> Bosnia &amp; Herz.</span><span class="match-venue">SoFi Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 19</span><span class="match-time">4:00 AM</span><span class="match-teams">Canada <span class="match-vs">vs</span> Qatar</span><span class="match-venue">BC Place</span></div>
+                    <div class="match-row"><span class="match-date">Jun 25</span><span class="match-time">1:00 AM</span><span class="match-teams">Switzerland <span class="match-vs">vs</span> Canada</span><span class="match-venue">BC Place</span></div>
+                    <div class="match-row"><span class="match-date">Jun 25</span><span class="match-time">1:00 AM</span><span class="match-teams">Bosnia &amp; Herz. <span class="match-vs">vs</span> Qatar</span><span class="match-venue">Lumen Field</span></div>
+                </div>
+            </div>
+
+            <!-- Group C -->
+            <div class="group-card reveal" data-group="A-D">
+                <div class="group-header">
+                    <span class="group-letter">Group C</span>
+                    <div class="group-teams">
+                        <span class="team-mini">BR</span>
+                        <span class="team-mini">MA</span>
+                        <span class="team-mini">HT</span>
+                        <span class="team-mini">SC</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 14</span><span class="match-time">4:00 AM</span><span class="match-teams">Brazil <span class="match-vs">vs</span> Morocco</span><span class="match-venue">MetLife Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 14</span><span class="match-time">7:00 AM</span><span class="match-teams">Haiti <span class="match-vs">vs</span> Scotland</span><span class="match-venue">Gillette Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 20</span><span class="match-time">4:00 AM</span><span class="match-teams">Scotland <span class="match-vs">vs</span> Morocco</span><span class="match-venue">Gillette Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 20</span><span class="match-time">7:00 AM</span><span class="match-teams">Brazil <span class="match-vs">vs</span> Haiti</span><span class="match-venue">Lincoln Financial Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 25</span><span class="match-time">4:00 AM</span><span class="match-teams">Scotland <span class="match-vs">vs</span> Brazil</span><span class="match-venue">Hard Rock Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 25</span><span class="match-time">4:00 AM</span><span class="match-teams">Morocco <span class="match-vs">vs</span> Haiti</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
+                </div>
+            </div>
+
+            <!-- Group D -->
+            <div class="group-card reveal" data-group="A-D">
+                <div class="group-header">
+                    <span class="group-letter">Group D</span>
+                    <div class="group-teams">
+                        <span class="team-mini">US</span>
+                        <span class="team-mini">PY</span>
+                        <span class="team-mini">AU</span>
+                        <span class="team-mini">TR</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 13</span><span class="match-time">7:00 AM</span><span class="match-teams">USA <span class="match-vs">vs</span> Paraguay</span><span class="match-venue">SoFi Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 14</span><span class="match-time">10:00 AM</span><span class="match-teams">Australia <span class="match-vs">vs</span> Turkiye</span><span class="match-venue">BC Place</span></div>
+                    <div class="match-row"><span class="match-date">Jun 20</span><span class="match-time">1:00 AM</span><span class="match-teams">USA <span class="match-vs">vs</span> Australia</span><span class="match-venue">Lumen Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 20</span><span class="match-time">10:00 AM</span><span class="match-teams">Turkiye <span class="match-vs">vs</span> Paraguay</span><span class="match-venue">Levi&#39;s Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 26</span><span class="match-time">8:00 AM</span><span class="match-teams">Turkiye <span class="match-vs">vs</span> USA</span><span class="match-venue">SoFi Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 26</span><span class="match-time">8:00 AM</span><span class="match-teams">Paraguay <span class="match-vs">vs</span> Australia</span><span class="match-venue">Levi&#39;s Stadium</span></div>
+                </div>
+            </div>
+
+            <!-- Group E -->
+            <div class="group-card reveal" data-group="E-H">
+                <div class="group-header">
+                    <span class="group-letter">Group E</span>
+                    <div class="group-teams">
+                        <span class="team-mini">DE</span>
+                        <span class="team-mini">CW</span>
+                        <span class="team-mini">CI</span>
+                        <span class="team-mini">EC</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 15</span><span class="match-time">12:00 AM</span><span class="match-teams">Germany <span class="match-vs">vs</span> Curacao</span><span class="match-venue">NRG Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 15</span><span class="match-time">5:00 AM</span><span class="match-teams">Ivory Coast <span class="match-vs">vs</span> Ecuador</span><span class="match-venue">Lincoln Financial Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 21</span><span class="match-time">2:00 AM</span><span class="match-teams">Germany <span class="match-vs">vs</span> Ivory Coast</span><span class="match-venue">BMO Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 21</span><span class="match-time">6:00 AM</span><span class="match-teams">Ecuador <span class="match-vs">vs</span> Curacao</span><span class="match-venue">Arrowhead Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 26</span><span class="match-time">2:00 AM</span><span class="match-teams">Ecuador <span class="match-vs">vs</span> Germany</span><span class="match-venue">MetLife Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 26</span><span class="match-time">2:00 AM</span><span class="match-teams">Curacao <span class="match-vs">vs</span> Ivory Coast</span><span class="match-venue">Lincoln Financial Field</span></div>
+                </div>
+            </div>
+
+            <!-- Group F -->
+            <div class="group-card reveal" data-group="E-H">
+                <div class="group-header">
+                    <span class="group-letter">Group F</span>
+                    <div class="group-teams">
+                        <span class="team-mini">NL</span>
+                        <span class="team-mini">JP</span>
+                        <span class="team-mini">SE</span>
+                        <span class="team-mini">TN</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 15</span><span class="match-time">2:00 AM</span><span class="match-teams">Netherlands <span class="match-vs">vs</span> Japan</span><span class="match-venue">AT&amp;T Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 15</span><span class="match-time">8:00 AM</span><span class="match-teams">Sweden <span class="match-vs">vs</span> Tunisia</span><span class="match-venue">Estadio BBVA</span></div>
+                    <div class="match-row"><span class="match-date">Jun 21</span><span class="match-time">12:00 AM</span><span class="match-teams">Netherlands <span class="match-vs">vs</span> Sweden</span><span class="match-venue">NRG Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 21</span><span class="match-time">10:00 AM</span><span class="match-teams">Tunisia <span class="match-vs">vs</span> Japan</span><span class="match-venue">Estadio BBVA</span></div>
+                    <div class="match-row"><span class="match-date">Jun 26</span><span class="match-time">5:00 AM</span><span class="match-teams">Japan <span class="match-vs">vs</span> Sweden</span><span class="match-venue">AT&amp;T Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 26</span><span class="match-time">5:00 AM</span><span class="match-teams">Tunisia <span class="match-vs">vs</span> Netherlands</span><span class="match-venue">Arrowhead Stadium</span></div>
+                </div>
+            </div>
+
+            <!-- Group G -->
+            <div class="group-card reveal" data-group="E-H">
+                <div class="group-header">
+                    <span class="group-letter">Group G</span>
+                    <div class="group-teams">
+                        <span class="team-mini">IR</span>
+                        <span class="team-mini">NZ</span>
+                        <span class="team-mini">BE</span>
+                        <span class="team-mini">EG</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">7:00 AM</span><span class="match-teams">Iran <span class="match-vs">vs</span> New Zealand</span><span class="match-venue">SoFi Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">1:00 AM</span><span class="match-teams">Belgium <span class="match-vs">vs</span> Egypt</span><span class="match-venue">Lumen Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">1:00 AM</span><span class="match-teams">Belgium <span class="match-vs">vs</span> Iran</span><span class="match-venue">SoFi Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">7:00 AM</span><span class="match-teams">New Zealand <span class="match-vs">vs</span> Egypt</span><span class="match-venue">BC Place</span></div>
+                    <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">9:00 AM</span><span class="match-teams">Egypt <span class="match-vs">vs</span> Iran</span><span class="match-venue">Lumen Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">9:00 AM</span><span class="match-teams">New Zealand <span class="match-vs">vs</span> Belgium</span><span class="match-venue">BC Place</span></div>
+                </div>
+            </div>
+
+            <!-- Group H -->
+            <div class="group-card reveal" data-group="E-H">
+                <div class="group-header">
+                    <span class="group-letter">Group H</span>
+                    <div class="group-teams">
+                        <span class="team-mini">ES</span>
+                        <span class="team-mini">CV</span>
+                        <span class="team-mini">SA</span>
+                        <span class="team-mini">UY</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">10:00 AM</span><span class="match-teams">Spain <span class="match-vs">vs</span> Cape Verde</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">4:00 AM</span><span class="match-teams">Saudi Arabia <span class="match-vs">vs</span> Uruguay</span><span class="match-venue">Hard Rock Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">10:00 AM</span><span class="match-teams">Spain <span class="match-vs">vs</span> Saudi Arabia</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">4:00 AM</span><span class="match-teams">Uruguay <span class="match-vs">vs</span> Cape Verde</span><span class="match-venue">Hard Rock Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">6:00 AM</span><span class="match-teams">Cape Verde <span class="match-vs">vs</span> Saudi Arabia</span><span class="match-venue">NRG Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">6:00 AM</span><span class="match-teams">Uruguay <span class="match-vs">vs</span> Spain</span><span class="match-venue">Estadio Akron</span></div>
+                </div>
+            </div>
+
+            <!-- Group I -->
+            <div class="group-card reveal" data-group="I-L">
+                <div class="group-header">
+                    <span class="group-letter">Group I</span>
+                    <div class="group-teams">
+                        <span class="team-mini">FR</span>
+                        <span class="team-mini">SN</span>
+                        <span class="team-mini">IQ</span>
+                        <span class="team-mini">NO</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 17</span><span class="match-time">1:00 AM</span><span class="match-teams">France <span class="match-vs">vs</span> Senegal</span><span class="match-venue">MetLife Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 17</span><span class="match-time">4:00 AM</span><span class="match-teams">Iraq <span class="match-vs">vs</span> Norway</span><span class="match-venue">Gillette Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 23</span><span class="match-time">3:00 AM</span><span class="match-teams">France <span class="match-vs">vs</span> Iraq</span><span class="match-venue">Lincoln Financial Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 23</span><span class="match-time">6:00 AM</span><span class="match-teams">Norway <span class="match-vs">vs</span> Senegal</span><span class="match-venue">MetLife Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">1:00 AM</span><span class="match-teams">Norway <span class="match-vs">vs</span> France</span><span class="match-venue">Gillette Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">1:00 AM</span><span class="match-teams">Senegal <span class="match-vs">vs</span> Iraq</span><span class="match-venue">BMO Field</span></div>
+                </div>
+            </div>
+
+            <!-- Group J -->
+            <div class="group-card reveal" data-group="I-L">
+                <div class="group-header">
+                    <span class="group-letter">Group J</span>
+                    <div class="group-teams">
+                        <span class="team-mini">AR</span>
+                        <span class="team-mini">DZ</span>
+                        <span class="team-mini">AT</span>
+                        <span class="team-mini">JO</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 17</span><span class="match-time">7:00 AM</span><span class="match-teams">Argentina <span class="match-vs">vs</span> Algeria</span><span class="match-venue">Arrowhead Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 17</span><span class="match-time">10:00 AM</span><span class="match-teams">Austria <span class="match-vs">vs</span> Jordan</span><span class="match-venue">Levi&#39;s Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 23</span><span class="match-time">12:00 AM</span><span class="match-teams">Argentina <span class="match-vs">vs</span> Austria</span><span class="match-venue">AT&amp;T Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 23</span><span class="match-time">9:00 AM</span><span class="match-teams">Jordan <span class="match-vs">vs</span> Algeria</span><span class="match-venue">Levi&#39;s Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 28</span><span class="match-time">8:00 AM</span><span class="match-teams">Algeria <span class="match-vs">vs</span> Austria</span><span class="match-venue">Arrowhead Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 28</span><span class="match-time">8:00 AM</span><span class="match-teams">Jordan <span class="match-vs">vs</span> Argentina</span><span class="match-venue">AT&amp;T Stadium</span></div>
+                </div>
+            </div>
+
+            <!-- Group K -->
+            <div class="group-card reveal" data-group="I-L">
+                <div class="group-header">
+                    <span class="group-letter">Group K</span>
+                    <div class="group-teams">
+                        <span class="team-mini">PT</span>
+                        <span class="team-mini">CD</span>
+                        <span class="team-mini">UZ</span>
+                        <span class="team-mini">CO</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 18</span><span class="match-time">12:00 AM</span><span class="match-teams">Portugal <span class="match-vs">vs</span> Congo DR</span><span class="match-venue">NRG Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 18</span><span class="match-time">8:00 AM</span><span class="match-teams">Uzbekistan <span class="match-vs">vs</span> Colombia</span><span class="match-venue">Estadio Azteca</span></div>
+                    <div class="match-row"><span class="match-date">Jun 24</span><span class="match-time">12:00 AM</span><span class="match-teams">Portugal <span class="match-vs">vs</span> Uzbekistan</span><span class="match-venue">NRG Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 24</span><span class="match-time">8:00 AM</span><span class="match-teams">Colombia <span class="match-vs">vs</span> Congo DR</span><span class="match-venue">Estadio Akron</span></div>
+                    <div class="match-row"><span class="match-date">Jun 28</span><span class="match-time">5:30 AM</span><span class="match-teams">Colombia <span class="match-vs">vs</span> Portugal</span><span class="match-venue">Hard Rock Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 28</span><span class="match-time">5:30 AM</span><span class="match-teams">Congo DR <span class="match-vs">vs</span> Uzbekistan</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
+                </div>
+            </div>
+
+            <!-- Group L -->
+            <div class="group-card reveal" data-group="I-L">
+                <div class="group-header">
+                    <span class="group-letter">Group L</span>
+                    <div class="group-teams">
+                        <span class="team-mini">EN</span>
+                        <span class="team-mini">HR</span>
+                        <span class="team-mini">GH</span>
+                        <span class="team-mini">PA</span>
+                    </div>
+                </div>
+                <div class="group-matches">
+                    <div class="match-row"><span class="match-date">Jun 18</span><span class="match-time">3:00 AM</span><span class="match-teams">England <span class="match-vs">vs</span> Croatia</span><span class="match-venue">AT&amp;T Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 18</span><span class="match-time">5:00 AM</span><span class="match-teams">Ghana <span class="match-vs">vs</span> Panama</span><span class="match-venue">BMO Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 24</span><span class="match-time">2:00 AM</span><span class="match-teams">England <span class="match-vs">vs</span> Ghana</span><span class="match-venue">Gillette Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 24</span><span class="match-time">5:00 AM</span><span class="match-teams">Panama <span class="match-vs">vs</span> Croatia</span><span class="match-venue">BMO Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 28</span><span class="match-time">3:00 AM</span><span class="match-teams">Panama <span class="match-vs">vs</span> England</span><span class="match-venue">MetLife Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 28</span><span class="match-time">3:00 AM</span><span class="match-teams">Croatia <span class="match-vs">vs</span> Ghana</span><span class="match-venue">Lincoln Financial Field</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="knockout">
+        <div class="section-header reveal">
+            <div class="section-tag">Knockout Stage</div>
+            <h2 class="section-title">Do or Die</h2>
+            <p class="section-desc">32 teams enter, one champion emerges. The knockout rounds begin with the Round of 32.</p>
+        </div>
+        <div class="knockout-container">
+            <!-- Round of 32 -->
+            <div class="knockout-round reveal">
+                <div class="knockout-round-title"><i class="fas fa-door-open"></i> Round of 32</div>
+                <div class="knockout-matches">
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 73</span><span class="knockout-match-date">Jun 29, 1:00 AM</span></div><div class="knockout-teams">Group A 2nd vs Group B 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> SoFi Stadium, Los Angeles</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 74</span><span class="knockout-match-date">Jun 29, 2:30 AM</span></div><div class="knockout-teams">Group C Winner vs Group F 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> NRG Stadium, Houston</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 75</span><span class="knockout-match-date">Jun 30, 7:00 AM</span></div><div class="knockout-teams">Group E Winner vs Best 3rd (A/B/C/D/F)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Gillette Stadium, Boston</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 76</span><span class="knockout-match-date">Jun 30, 3:00 AM</span></div><div class="knockout-teams">Group F Winner vs Group C 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Estadio BBVA, Monterrey</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 77</span><span class="knockout-match-date">Jun 30, 7:00 AM</span></div><div class="knockout-teams">Group I Winner vs Best 3rd (C/D/F/G/H)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> MetLife Stadium, New York/NJ</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 78</span><span class="knockout-match-date">Jul 1, 12:00 AM</span></div><div class="knockout-teams">Group A Winner vs Best 3rd (C/E/F/H/I)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> AT&amp;T Stadium, Dallas</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 79</span><span class="knockout-match-date">Jul 1, 4:00 AM</span></div><div class="knockout-teams">Group L Winner vs Best 3rd (E/H/I/J/K)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> BMO Field, Toronto</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 80</span><span class="knockout-match-date">Jul 1, 8:00 AM</span></div><div class="knockout-teams">Group D Winner vs Best 3rd (B/E/F/I/J)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Levi&#39;s Stadium, San Francisco</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 81</span><span class="knockout-match-date">Jul 2, 1:00 AM</span></div><div class="knockout-teams">Group H Winner vs Group J 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> SoFi Stadium, Los Angeles</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 82</span><span class="knockout-match-date">Jul 2, 5:00 AM</span></div><div class="knockout-teams">Group K 2nd vs Group L 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> BMO Field, Toronto</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 83</span><span class="knockout-match-date">Jul 3, 12:00 AM</span></div><div class="knockout-teams">Group B Winner vs Best 3rd (E/F/G/I/J)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> BC Place, Vancouver</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 84</span><span class="knockout-match-date">Jul 3, 2:00 AM</span></div><div class="knockout-teams">Group D 2nd vs Group G 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> AT&amp;T Stadium, Dallas</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 85</span><span class="knockout-match-date">Jul 3, 6:00 AM</span></div><div class="knockout-teams">Group J Winner vs Group H 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Hard Rock Stadium, Miami</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 86</span><span class="knockout-match-date">Jul 3, 9:30 AM</span></div><div class="knockout-teams">Group K Winner vs Best 3rd (D/E/I/J/L)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Arrowhead Stadium, Kansas City</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 87</span><span class="knockout-match-date">Jul 4, 12:00 AM</span></div><div class="knockout-teams">Group E 2nd vs Group I 2nd</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Gillette Stadium, Boston</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 88</span><span class="knockout-match-date">Jul 4, 3:00 AM</span></div><div class="knockout-teams">Group G Winner vs Best 3rd (A/E/H/I/J)</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Lumen Field, Seattle</div></div>
+                </div>
+            </div>
+
+            <!-- Round of 16 -->
+            <div class="knockout-round reveal">
+                <div class="knockout-round-title"><i class="fas fa-fire"></i> Round of 16</div>
+                <div class="knockout-matches">
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 89</span><span class="knockout-match-date">Jul 4, 1:00 AM</span></div><div class="knockout-teams">Winner Match 73 vs Winner Match 74</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> NRG Stadium, Houston</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 90</span><span class="knockout-match-date">Jul 4, 5:00 AM</span></div><div class="knockout-teams">Winner Match 75 vs Winner Match 76</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Lincoln Financial Field, Philadelphia</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 91</span><span class="knockout-match-date">Jul 5, 4:00 AM</span></div><div class="knockout-teams">Winner Match 77 vs Winner Match 78</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> MetLife Stadium, New York/NJ</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 92</span><span class="knockout-match-date">Jul 5, 8:00 AM</span></div><div class="knockout-teams">Winner Match 79 vs Winner Match 80</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Estadio Azteca, Mexico City</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 93</span><span class="knockout-match-date">Jul 6, 3:00 AM</span></div><div class="knockout-teams">Winner Match 81 vs Winner Match 82</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> AT&amp;T Stadium, Dallas</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 94</span><span class="knockout-match-date">Jul 6, 8:00 AM</span></div><div class="knockout-teams">Winner Match 83 vs Winner Match 84</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Lumen Field, Seattle</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 95</span><span class="knockout-match-date">Jul 7, 12:00 AM</span></div><div class="knockout-teams">Winner Match 85 vs Winner Match 86</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Mercedes-Benz Stadium, Atlanta</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 96</span><span class="knockout-match-date">Jul 7, 4:00 AM</span></div><div class="knockout-teams">Winner Match 87 vs Winner Match 88</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> BC Place, Vancouver</div></div>
+                </div>
+            </div>
+
+            <!-- Quarter Finals -->
+            <div class="knockout-round reveal">
+                <div class="knockout-round-title"><i class="fas fa-star"></i> Quarter Finals</div>
+                <div class="knockout-matches">
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 97</span><span class="knockout-match-date">Jul 9, 4:00 AM</span></div><div class="knockout-teams">Winner Match 89 vs Winner Match 90</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Gillette Stadium, Boston</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 98</span><span class="knockout-match-date">Jul 10, 3:00 AM</span></div><div class="knockout-teams">Winner Match 91 vs Winner Match 92</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> SoFi Stadium, Los Angeles</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 99</span><span class="knockout-match-date">Jul 11, 5:00 AM</span></div><div class="knockout-teams">Winner Match 93 vs Winner Match 94</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Hard Rock Stadium, Miami</div></div>
+                    <div class="knockout-match"><div class="knockout-match-header"><span class="knockout-match-num">Match 100</span><span class="knockout-match-date">Jul 11, 9:00 AM</span></div><div class="knockout-teams">Winner Match 95 vs Winner Match 96</div><div class="knockout-venue"><i class="fas fa-map-marker-alt"></i> Arrowhead Stadium, Kansas City</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="finals">
+        <div class="section-header reveal">
+            <div class="section-tag">The Grand Finale</div>
+            <h2 class="section-title">The Final Stretch</h2>
+            <p class="section-desc">The last four matches that will decide the champion of the 2026 FIFA World Cup.</p>
+        </div>
+        <div class="finals-section">
+            <div class="final-card reveal">
+                <div class="final-icon"><i class="fas fa-medal"></i></div>
+                <div class="final-title">Semi Final 1</div>
+                <div class="final-date">Jul 14, 3:00 AM</div>
+                <div class="final-teams">Winner Match 97 vs Winner Match 98</div>
+                <div class="final-venue"><i class="fas fa-map-marker-alt"></i> AT&amp;T Stadium, Dallas</div>
+            </div>
+            <div class="final-card reveal">
+                <div class="final-icon"><i class="fas fa-medal"></i></div>
+                <div class="final-title">Semi Final 2</div>
+                <div class="final-date">Jul 15, 3:00 AM</div>
+                <div class="final-teams">Winner Match 99 vs Winner Match 100</div>
+                <div class="final-venue"><i class="fas fa-map-marker-alt"></i> Mercedes-Benz Stadium, Atlanta</div>
+            </div>
+            <div class="final-card reveal">
+                <div class="final-icon"><i class="fas fa-trophy"></i></div>
+                <div class="final-title">3rd Place</div>
+                <div class="final-date">Jul 18, 5:00 AM</div>
+                <div class="final-teams">Loser SF1 vs Loser SF2</div>
+                <div class="final-venue"><i class="fas fa-map-marker-alt"></i> Hard Rock Stadium, Miami</div>
+            </div>
+            <div class="final-card reveal highlight">
+                <div class="final-icon"><i class="fas fa-crown"></i></div>
+                <div class="final-title">THE FINAL</div>
+                <div class="final-date">Jul 19, 3:00 AM</div>
+                <div class="final-teams">Winner SF1 vs Winner SF2</div>
+                <div class="final-venue"><i class="fas fa-map-marker-alt"></i> MetLife Stadium, New York/NJ</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="venues">
+        <div class="section-header reveal">
+            <div class="section-tag">Stadiums</div>
+            <h2 class="section-title">The Venues</h2>
+            <p class="section-desc">16 world-class stadiums across 3 nations will host the 104 matches of the 2026 FIFA World Cup.</p>
+        </div>
+        <div class="venues-grid">
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">MetLife Stadium</div>
+                    <div class="venue-city">New York / New Jersey, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 82,500 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">SoFi Stadium</div>
+                    <div class="venue-city">Los Angeles, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 70,000 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">AT&amp;T Stadium</div>
+                    <div class="venue-city">Dallas, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 80,000 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Arrowhead Stadium</div>
+                    <div class="venue-city">Kansas City, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 76,416 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">NRG Stadium</div>
+                    <div class="venue-city">Houston, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 72,220 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Mercedes-Benz Stadium</div>
+                    <div class="venue-city">Atlanta, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 71,000 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Lincoln Financial Field</div>
+                    <div class="venue-city">Philadelphia, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 69,796 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Hard Rock Stadium</div>
+                    <div class="venue-city">Miami, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 64,767 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Gillette Stadium</div>
+                    <div class="venue-city">Boston, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 65,878 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Levi&#39;s Stadium</div>
+                    <div class="venue-city">San Francisco Bay, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 68,500 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Lumen Field</div>
+                    <div class="venue-city">Seattle, USA</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 69,000 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">BC Place</div>
+                    <div class="venue-city">Vancouver, Canada</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 54,500 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">BMO Field</div>
+                    <div class="venue-city">Toronto, Canada</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 45,736 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Estadio Azteca</div>
+                    <div class="venue-city">Mexico City, Mexico</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 87,523 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Estadio Akron</div>
+                    <div class="venue-city">Guadalajara, Mexico</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 48,071 capacity</div>
+                </div>
+            </div>
+            <div class="venue-card reveal">
+                <div class="venue-img"><i class="fas fa-stadium"></i></div>
+                <div class="venue-info">
+                    <div class="venue-name">Estadio BBVA</div>
+                    <div class="venue-city">Monterrey, Mexico</div>
+                    <div class="venue-capacity"><i class="fas fa-users"></i> 53,500 capacity</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <div class="section-header reveal">
+            <div class="section-tag">Key Dates</div>
+            <h2 class="section-title">Tournament Timeline</h2>
+            <p class="section-desc">Mark your calendar for these important dates throughout the tournament.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-date">June 11, 2026</div>
+                <div class="timeline-title">Opening Ceremony &amp; First Match</div>
+                <div class="timeline-desc">Mexico vs South Africa at Estadio Azteca, Mexico City</div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">June 11 - June 27</div>
+                <div class="timeline-title">Group Stage</div>
+                <div class="timeline-desc">72 matches across 12 groups. Every team plays 3 matches.</div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">June 28 - July 3</div>
+                <div class="timeline-title">Round of 32</div>
+                <div class="timeline-desc">Top 2 from each group + 8 best third-placed teams compete in knockout matches.</div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">July 4 - July 7</div>
+                <div class="timeline-title">Round of 16</div>
+                <div class="timeline-desc">16 teams battle for a place in the quarter-finals.</div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">July 9 - July 11</div>
+                <div class="timeline-title">Quarter Finals</div>
+                <div class="timeline-desc">The final 8 teams fight for a spot in the semi-finals.</div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">July 14 - July 15</div>
+                <div class="timeline-title">Semi Finals</div>
+                <div class="timeline-desc">The last 4 teams compete for a place in the World Cup Final.</div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">July 18, 2026</div>
+                <div class="timeline-title">3rd Place Match</div>
+                <div class="timeline-desc">The two losing semi-finalists compete for bronze at Hard Rock Stadium, Miami.</div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">July 19, 2026</div>
+                <div class="timeline-title">THE FINAL</div>
+                <div class="timeline-desc">The 2026 FIFA World Cup Final at MetLife Stadium, New York/New Jersey. Who will lift the trophy?</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">WC <span>2026</span></div>
+            <p class="footer-text">FIFA World Cup 2026 Schedule - Bangladesh Standard Time (BST, UTC+6). All match times are converted from Eastern Time (ET) to Bangladesh Time.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>FIFA World Cup 2026 - June 11 to July 19, 2026 | USA, Canada &amp; Mexico</p>
+                <p style="margin-top:0.5rem; font-size:0.75rem;">This is an unofficial fan-made schedule. All times are approximate and subject to change by FIFA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // ===== PARTICLES =====
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (6 + Math.random() * 4) + 's';
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // ===== HEADER SCROLL EFFECT =====
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // ===== SCROLL REVEAL ANIMATION =====
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== COUNTDOWN TIMER =====
+        function updateCountdown() {
+            const openingDate = new Date('2026-06-12T01:00:00+06:00'); // Bangladesh time
+            const now = new Date();
+            const diff = openingDate - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // ===== ANIMATED COUNTERS =====
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-count]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+        // Trigger counter animation when hero is visible
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    heroObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+        heroObserver.observe(document.querySelector('.hero'));
+
+        // ===== GROUP FILTER =====
+        function filterGroups(range) {
+            const tabs = document.querySelectorAll('#groups .filter-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.group-card');
+            cards.forEach(card => {
+                if (range === 'all' || card.dataset.group === range) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // ===== MATCH DATA =====
+        const allMatches = [
+            // Group A
+            { num: 1, date: 'Jun 12', time: '1:00 AM', team1: 'Mexico', team2: 'South Africa', venue: 'Estadio Azteca', group: 'A', type: 'group' },
+            { num: 2, date: 'Jun 12', time: '8:00 AM', team1: 'South Korea', team2: 'Czechia', venue: 'Estadio Akron', group: 'A', type: 'group' },
+            { num: 25, date: 'Jun 19', time: '12:00 AM', team1: 'Czechia', team2: 'South Africa', venue: 'Mercedes-Benz Stadium', group: 'A', type: 'group' },
+            { num: 26, date: 'Jun 19', time: '7:00 AM', team1: 'Mexico', team2: 'South Korea', venue: 'Estadio Akron', group: 'A', type: 'group' },
+            { num: 49, date: 'Jun 25', time: '7:00 AM', team1: 'Czechia', team2: 'Mexico', venue: 'Estadio Azteca', group: 'A', type: 'group' },
+            { num: 50, date: 'Jun 25', time: '7:00 AM', team1: 'South Africa', team2: 'South Korea', venue: 'Estadio BBVA', group: 'A', type: 'group' },
+            // Group B
+            { num: 3, date: 'Jun 13', time: '1:00 AM', team1: 'Canada', team2: 'Bosnia & Herz.', venue: 'BMO Field', group: 'B', type: 'group' },
+            { num: 4, date: 'Jun 14', time: '1:00 AM', team1: 'Qatar', team2: 'Switzerland', venue: 'Levi\'s Stadium', group: 'B', type: 'group' },
+            { num: 27, date: 'Jun 19', time: '1:00 AM', team1: 'Switzerland', team2: 'Bosnia & Herz.', venue: 'SoFi Stadium', group: 'B', type: 'group' },
+            { num: 28, date: 'Jun 19', time: '4:00 AM', team1: 'Canada', team2: 'Qatar', venue: 'BC Place', group: 'B', type: 'group' },
+            { num: 51, date: 'Jun 25', time: '1:00 AM', team1: 'Switzerland', team2: 'Canada', venue: 'BC Place', group: 'B', type: 'group' },
+            { num: 52, date: 'Jun 25', time: '1:00 AM', team1: 'Bosnia & Herz.', team2: 'Qatar', venue: 'Lumen Field', group: 'B', type: 'group' },
+            // Group C
+            { num: 5, date: 'Jun 14', time: '4:00 AM', team1: 'Brazil', team2: 'Morocco', venue: 'MetLife Stadium', group: 'C', type: 'group' },
+            { num: 6, date: 'Jun 14', time: '7:00 AM', team1: 'Haiti', team2: 'Scotland', venue: 'Gillette Stadium', group: 'C', type: 'group' },
+            { num: 29, date: 'Jun 20', time: '4:00 AM', team1: 'Scotland', team2: 'Morocco', venue: 'Gillette Stadium', group: 'C', type: 'group' },
+            { num: 30, date: 'Jun 20', time: '7:00 AM', team1: 'Brazil', team2: 'Haiti', venue: 'Lincoln Financial Field', group: 'C', type: 'group' },
+            { num: 53, date: 'Jun 25', time: '4:00 AM', team1: 'Scotland', team2: 'Brazil', venue: 'Hard Rock Stadium', group: 'C', type: 'group' },
+            { num: 54, date: 'Jun 25', time: '4:00 AM', team1: 'Morocco', team2: 'Haiti', venue: 'Mercedes-Benz Stadium', group: 'C', type: 'group' },
+            // Group D
+            { num: 7, date: 'Jun 13', time: '7:00 AM', team1: 'USA', team2: 'Paraguay', venue: 'SoFi Stadium', group: 'D', type: 'group' },
+            { num: 8, date: 'Jun 14', time: '10:00 AM', team1: 'Australia', team2: 'Turkiye', venue: 'BC Place', group: 'D', type: 'group' },
+            { num: 31, date: 'Jun 20', time: '1:00 AM', team1: 'USA', team2: 'Australia', venue: 'Lumen Field', group: 'D', type: 'group' },
+            { num: 32, date: 'Jun 20', time: '10:00 AM', team1: 'Turkiye', team2: 'Paraguay', venue: 'Levi\'s Stadium', group: 'D', type: 'group' },
+            { num: 55, date: 'Jun 26', time: '8:00 AM', team1: 'Turkiye', team2: 'USA', venue: 'SoFi Stadium', group: 'D', type: 'group' },
+            { num: 56, date: 'Jun 26', time: '8:00 AM', team1: 'Paraguay', team2: 'Australia', venue: 'Levi\'s Stadium', group: 'D', type: 'group' },
+            // Group E
+            { num: 9, date: 'Jun 15', time: '12:00 AM', team1: 'Germany', team2: 'Curacao', venue: 'NRG Stadium', group: 'E', type: 'group' },
+            { num: 10, date: 'Jun 15', time: '5:00 AM', team1: 'Ivory Coast', team2: 'Ecuador', venue: 'Lincoln Financial Field', group: 'E', type: 'group' },
+            { num: 33, date: 'Jun 21', time: '2:00 AM', team1: 'Germany', team2: 'Ivory Coast', venue: 'BMO Field', group: 'E', type: 'group' },
+            { num: 34, date: 'Jun 21', time: '6:00 AM', team1: 'Ecuador', team2: 'Curacao', venue: 'Arrowhead Stadium', group: 'E', type: 'group' },
+            { num: 57, date: 'Jun 26', time: '2:00 AM', team1: 'Ecuador', team2: 'Germany', venue: 'MetLife Stadium', group: 'E', type: 'group' },
+            { num: 58, date: 'Jun 26', time: '2:00 AM', team1: 'Curacao', team2: 'Ivory Coast', venue: 'Lincoln Financial Field', group: 'E', type: 'group' },
+            // Group F
+            { num: 11, date: 'Jun 15', time: '2:00 AM', team1: 'Netherlands', team2: 'Japan', venue: 'AT&T Stadium', group: 'F', type: 'group' },
+            { num: 12, date: 'Jun 15', time: '8:00 AM', team1: 'Sweden', team2: 'Tunisia', venue: 'Estadio BBVA', group: 'F', type: 'group' },
+            { num: 35, date: 'Jun 21', time: '12:00 AM', team1: 'Netherlands', team2: 'Sweden', venue: 'NRG Stadium', group: 'F', type: 'group' },
+            { num: 36, date: 'Jun 21', time: '10:00 AM', team1: 'Tunisia', team2: 'Japan', venue: 'Estadio BBVA', group: 'F', type: 'group' },
+            { num: 59, date: 'Jun 26', time: '5:00 AM', team1: 'Japan', team2: 'Sweden', venue: 'AT&T Stadium', group: 'F', type: 'group' },
+            { num: 60, date: 'Jun 26', time: '5:00 AM', team1: 'Tunisia', team2: 'Netherlands', venue: 'Arrowhead Stadium', group: 'F', type: 'group' },
+            // Group G
+            { num: 13, date: 'Jun 16', time: '7:00 AM', team1: 'Iran', team2: 'New Zealand', venue: 'SoFi Stadium', group: 'G', type: 'group' },
+            { num: 14, date: 'Jun 16', time: '1:00 AM', team1: 'Belgium', team2: 'Egypt', venue: 'Lumen Field', group: 'G', type: 'group' },
+            { num: 37, date: 'Jun 22', time: '1:00 AM', team1: 'Belgium', team2: 'Iran', venue: 'SoFi Stadium', group: 'G', type: 'group' },
+            { num: 38, date: 'Jun 22', time: '7:00 AM', team1: 'New Zealand', team2: 'Egypt', venue: 'BC Place', group: 'G', type: 'group' },
+            { num: 61, date: 'Jun 27', time: '9:00 AM', team1: 'Egypt', team2: 'Iran', venue: 'Lumen Field', group: 'G', type: 'group' },
+            { num: 62, date: 'Jun 27', time: '9:00 AM', team1: 'New Zealand', team2: 'Belgium', venue: 'BC Place', group: 'G', type: 'group' },
+            // Group H
+            { num: 15, date: 'Jun 16', time: '10:00 AM', team1: 'Spain', team2: 'Cape Verde', venue: 'Mercedes-Benz Stadium', group: 'H', type: 'group' },
+            { num: 16, date: 'Jun 16', time: '4:00 AM', team1: 'Saudi Arabia', team2: 'Uruguay', venue: 'Hard Rock Stadium', group: 'H', type: 'group' },
+            { num: 39, date: 'Jun 22', time: '10:00 AM', team1: 'Spain', team2: 'Saudi Arabia', venue: 'Mercedes-Benz Stadium', group: 'H', type: 'group' },
+            { num: 40, date: 'Jun 22', time: '4:00 AM', team1: 'Uruguay', team2: 'Cape Verde', venue: 'Hard Rock Stadium', group: 'H', type: 'group' },
+            { num: 63, date: 'Jun 27', time: '6:00 AM', team1: 'Cape Verde', team2: 'Saudi Arabia', venue: 'NRG Stadium', group: 'H', type: 'group' },
+            { num: 64, date: 'Jun 27', time: '6:00 AM', team1: 'Uruguay', team2: 'Spain', venue: 'Estadio Akron', group: 'H', type: 'group' },
+            // Group I
+            { num: 17, date: 'Jun 17', time: '1:00 AM', team1: 'France', team2: 'Senegal', venue: 'MetLife Stadium', group: 'I', type: 'group' },
+            { num: 18, date: 'Jun 17', time: '4:00 AM', team1: 'Iraq', team2: 'Norway', venue: 'Gillette Stadium', group: 'I', type: 'group' },
+            { num: 41, date: 'Jun 23', time: '3:00 AM', team1: 'France', team2: 'Iraq', venue: 'Lincoln Financial Field', group: 'I', type: 'group' },
+            { num: 42, date: 'Jun 23', time: '6:00 AM', team1: 'Norway', team2: 'Senegal', venue: 'MetLife Stadium', group: 'I', type: 'group' },
+            { num: 65, date: 'Jun 27', time: '1:00 AM', team1: 'Norway', team2: 'France', venue: 'Gillette Stadium', group: 'I', type: 'group' },
+            { num: 66, date: 'Jun 27', time: '1:00 AM', team1: 'Senegal', team2: 'Iraq', venue: 'BMO Field', group: 'I', type: 'group' },
+            // Group J
+            { num: 19, date: 'Jun 17', time: '7:00 AM', team1: 'Argentina', team2: 'Algeria', venue: 'Arrowhead Stadium', group: 'J', type: 'group' },
+            { num: 20, date: 'Jun 17', time: '10:00 AM', team1: 'Austria', team2: 'Jordan', venue: 'Levi\'s Stadium', group: 'J', type: 'group' },
+            { num: 43, date: 'Jun 23', time: '12:00 AM', team1: 'Argentina', team2: 'Austria', venue: 'AT&T Stadium', group: 'J', type: 'group' },
+            { num: 44, date: 'Jun 23', time: '9:00 AM', team1: 'Jordan', team2: 'Algeria', venue: 'Levi\'s Stadium', group: 'J', type: 'group' },
+            { num: 67, date: 'Jun 28', time: '8:00 AM', team1: 'Algeria', team2: 'Austria', venue: 'Arrowhead Stadium', group: 'J', type: 'group' },
+            { num: 68, date: 'Jun 28', time: '8:00 AM', team1: 'Jordan', team2: 'Argentina', venue: 'AT&T Stadium', group: 'J', type: 'group' },
+            // Group K
+            { num: 21, date: 'Jun 18', time: '12:00 AM', team1: 'Portugal', team2: 'Congo DR', venue: 'NRG Stadium', group: 'K', type: 'group' },
+            { num: 22, date: 'Jun 18', time: '8:00 AM', team1: 'Uzbekistan', team2: 'Colombia', venue: 'Estadio Azteca', group: 'K', type: 'group' },
+            { num: 45, date: 'Jun 24', time: '12:00 AM', team1: 'Portugal', team2: 'Uzbekistan', venue: 'NRG Stadium', group: 'K', type: 'group' },
+            { num: 46, date: 'Jun 24', time: '8:00 AM', team1: 'Colombia', team2: 'Congo DR', venue: 'Estadio Akron', group: 'K', type: 'group' },
+            { num: 69, date: 'Jun 28', time: '5:30 AM', team1: 'Colombia', team2: 'Portugal', venue: 'Hard Rock Stadium', group: 'K', type: 'group' },
+            { num: 70, date: 'Jun 28', time: '5:30 AM', team1: 'Congo DR', team2: 'Uzbekistan', venue: 'Mercedes-Benz Stadium', group: 'K', type: 'group' },
+            // Group L
+            { num: 23, date: 'Jun 18', time: '3:00 AM', team1: 'England', team2: 'Croatia', venue: 'AT&T Stadium', group: 'L', type: 'group' },
+            { num: 24, date: 'Jun 18', time: '5:00 AM', team1: 'Ghana', team2: 'Panama', venue: 'BMO Field', group: 'L', type: 'group' },
+            { num: 47, date: 'Jun 24', time: '2:00 AM', team1: 'England', team2: 'Ghana', venue: 'Gillette Stadium', group: 'L', type: 'group' },
+            { num: 48, date: 'Jun 24', time: '5:00 AM', team1: 'Panama', team2: 'Croatia', venue: 'BMO Field', group: 'L', type: 'group' },
+            { num: 71, date: 'Jun 28', time: '3:00 AM', team1: 'Panama', team2: 'England', venue: 'MetLife Stadium', group: 'L', type: 'group' },
+            { num: 72, date: 'Jun 28', time: '3:00 AM', team1: 'Croatia', team2: 'Ghana', venue: 'Lincoln Financial Field', group: 'L', type: 'group' },
+            // Knockout - Round of 32
+            { num: 73, date: 'Jun 29', time: '1:00 AM', team1: 'Group A 2nd', team2: 'Group B 2nd', venue: 'SoFi Stadium', group: 'R32', type: 'knockout' },
+            { num: 74, date: 'Jun 29', time: '2:30 AM', team1: 'Group C Winner', team2: 'Group F 2nd', venue: 'NRG Stadium', group: 'R32', type: 'knockout' },
+            { num: 75, date: 'Jun 30', time: '7:00 AM', team1: 'Group E Winner', team2: 'Best 3rd', venue: 'Gillette Stadium', group: 'R32', type: 'knockout' },
+            { num: 76, date: 'Jun 30', time: '3:00 AM', team1: 'Group F Winner', team2: 'Group C 2nd', venue: 'Estadio BBVA', group: 'R32', type: 'knockout' },
+            { num: 77, date: 'Jun 30', time: '7:00 AM', team1: 'Group I Winner', team2: 'Best 3rd', venue: 'MetLife Stadium', group: 'R32', type: 'knockout' },
+            { num: 78, date: 'Jul 1', time: '12:00 AM', team1: 'Group A Winner', team2: 'Best 3rd', venue: 'AT&T Stadium', group: 'R32', type: 'knockout' },
+            { num: 79, date: 'Jul 1', time: '4:00 AM', team1: 'Group L Winner', team2: 'Best 3rd', venue: 'BMO Field', group: 'R32', type: 'knockout' },
+            { num: 80, date: 'Jul 1', time: '8:00 AM', team1: 'Group D Winner', team2: 'Best 3rd', venue: 'Levi\'s Stadium', group: 'R32', type: 'knockout' },
+            { num: 81, date: 'Jul 2', time: '1:00 AM', team1: 'Group H Winner', team2: 'Group J 2nd', venue: 'SoFi Stadium', group: 'R32', type: 'knockout' },
+            { num: 82, date: 'Jul 2', time: '5:00 AM', team1: 'Group K 2nd', team2: 'Group L 2nd', venue: 'BMO Field', group: 'R32', type: 'knockout' },
+            { num: 83, date: 'Jul 3', time: '12:00 AM', team1: 'Group B Winner', team2: 'Best 3rd', venue: 'BC Place', group: 'R32', type: 'knockout' },
+            { num: 84, date: 'Jul 3', time: '2:00 AM', team1: 'Group D 2nd', team2: 'Group G 2nd', venue: 'AT&T Stadium', group: 'R32', type: 'knockout' },
+            { num: 85, date: 'Jul 3', time: '6:00 AM', team1: 'Group J Winner', team2: 'Group H 2nd', venue: 'Hard Rock Stadium', group: 'R32', type: 'knockout' },
+            { num: 86, date: 'Jul 3', time: '9:30 AM', team1: 'Group K Winner', team2: 'Best 3rd', venue: 'Arrowhead Stadium', group: 'R32', type: 'knockout' },
+            { num: 87, date: 'Jul 4', time: '12:00 AM', team1: 'Group E 2nd', team2: 'Group I 2nd', venue: 'Gillette Stadium', group: 'R32', type: 'knockout' },
+            { num: 88, date: 'Jul 4', time: '3:00 AM', team1: 'Group G Winner', team2: 'Best 3rd', venue: 'Lumen Field', group: 'R32', type: 'knockout' },
+            // Round of 16
+            { num: 89, date: 'Jul 4', time: '1:00 AM', team1: 'Winner M73', team2: 'Winner M74', venue: 'NRG Stadium', group: 'R16', type: 'knockout' },
+            { num: 90, date: 'Jul 4', time: '5:00 AM', team1: 'Winner M75', team2: 'Winner M76', venue: 'Lincoln Financial Field', group: 'R16', type: 'knockout' },
+            { num: 91, date: 'Jul 5', time: '4:00 AM', team1: 'Winner M77', team2: 'Winner M78', venue: 'MetLife Stadium', group: 'R16', type: 'knockout' },
+            { num: 92, date: 'Jul 5', time: '8:00 AM', team1: 'Winner M79', team2: 'Winner M80', venue: 'Estadio Azteca', group: 'R16', type: 'knockout' },
+            { num: 93, date: 'Jul 6', time: '3:00 AM', team1: 'Winner M81', team2: 'Winner M82', venue: 'AT&T Stadium', group: 'R16', type: 'knockout' },
+            { num: 94, date: 'Jul 6', time: '8:00 AM', team1: 'Winner M83', team2: 'Winner M84', venue: 'Lumen Field', group: 'R16', type: 'knockout' },
+            { num: 95, date: 'Jul 7', time: '12:00 AM', team1: 'Winner M85', team2: 'Winner M86', venue: 'Mercedes-Benz Stadium', group: 'R16', type: 'knockout' },
+            { num: 96, date: 'Jul 7', time: '4:00 AM', team1: 'Winner M87', team2: 'Winner M88', venue: 'BC Place', group: 'R16', type: 'knockout' },
+            // Quarter Finals
+            { num: 97, date: 'Jul 9', time: '4:00 AM', team1: 'Winner M89', team2: 'Winner M90', venue: 'Gillette Stadium', group: 'QF', type: 'knockout' },
+            { num: 98, date: 'Jul 10', time: '3:00 AM', team1: 'Winner M91', team2: 'Winner M92', venue: 'SoFi Stadium', group: 'QF', type: 'knockout' },
+            { num: 99, date: 'Jul 11', time: '5:00 AM', team1: 'Winner M93', team2: 'Winner M94', venue: 'Hard Rock Stadium', group: 'QF', type: 'knockout' },
+            { num: 100, date: 'Jul 11', time: '9:00 AM', team1: 'Winner M95', team2: 'Winner M96', venue: 'Arrowhead Stadium', group: 'QF', type: 'knockout' },
+            // Semi Finals
+            { num: 101, date: 'Jul 14', time: '3:00 AM', team1: 'Winner M97', team2: 'Winner M98', venue: 'AT&T Stadium', group: 'SF', type: 'knockout' },
+            { num: 102, date: 'Jul 15', time: '3:00 AM', team1: 'Winner M99', team2: 'Winner M100', venue: 'Mercedes-Benz Stadium', group: 'SF', type: 'knockout' },
+            // 3rd Place
+            { num: 103, date: 'Jul 18', time: '5:00 AM', team1: 'Loser SF1', team2: 'Loser SF2', venue: 'Hard Rock Stadium', group: '3P', type: 'knockout' },
+            // Final
+            { num: 104, date: 'Jul 19', time: '3:00 AM', team1: 'Winner SF1', team2: 'Winner SF2', venue: 'MetLife Stadium', group: 'F', type: 'knockout' }
+        ];
+
+        let currentSort = 'date';
+        let currentFilter = 'all';
+
+        // ===== RENDER MATCH LIST =====
+        function renderMatchList(matches) {
+            const list = document.getElementById('matchList');
+            list.innerHTML = '';
+
+            matches.forEach((match, index) => {
+                const item = document.createElement('div');
+                item.className = 'match-list-item';
+                item.style.animationDelay = (index * 0.02) + 's';
+                item.innerHTML = `
+                    <span class="match-list-num">#${match.num}</span>
+                    <div class="match-list-datetime">
+                        <span class="match-list-date">${match.date}</span>
+                        <span class="match-list-time">${match.time}</span>
+                    </div>
+                    <div class="match-list-teams">${match.team1} <span class="match-list-vs">vs</span> ${match.team2}</div>
+                    <span class="match-list-group">${match.group}</span>
+                    <span class="match-list-venue">${match.venue}</span>
+                `;
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.match-list-item').forEach(i => i.classList.remove('highlighted'));
+                    item.classList.add('highlighted');
+                });
+                list.appendChild(item);
+            });
+
+            document.getElementById('matchCount').textContent = matches.length;
+        }
+
+        // ===== SORT MATCH LIST =====
+        function sortMatchList(sortBy) {
+            currentSort = sortBy;
+            const buttons = document.querySelectorAll('.match-list-controls .control-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent.includes('By')) {
+                    btn.classList.remove('active');
+                }
+            });
+            event.target.classList.add('active');
+
+            let sorted = [...allMatches];
+            if (sortBy === 'date') {
+                sorted.sort((a, b) => {
+                    const dateA = parseDate(a.date, a.time);
+                    const dateB = parseDate(b.date, b.time);
+                    return dateA - dateB;
+                });
+            } else if (sortBy === 'group') {
+                sorted.sort((a, b) => {
+                    if (a.group !== b.group) return a.group.localeCompare(b.group);
+                    const dateA = parseDate(a.date, a.time);
+                    const dateB = parseDate(b.date, b.time);
+                    return dateA - dateB;
+                });
+            }
+
+            applyFilter(sorted);
+        }
+
+        // ===== PARSE DATE =====
+        function parseDate(dateStr, timeStr) {
+            const monthMap = { 'Jun': 5, 'Jul': 6 };
+            const month = monthMap[dateStr.split(' ')[0]];
+            const day = parseInt(dateStr.split(' ')[1]);
+            const [hours, minutes] = timeStr.replace(' AM', '').replace(' PM', '').split(':').map(Number);
+            return new Date(2026, month, day, hours, minutes);
+        }
+
+        // ===== FILTER MATCH LIST =====
+        function filterMatchList(filterType) {
+            currentFilter = filterType;
+            const buttons = document.querySelectorAll('.match-list-controls .control-btn');
+            buttons.forEach(btn => {
+                if (!btn.textContent.includes('By')) {
+                    btn.classList.remove('active');
+                }
+            });
+            event.target.classList.add('active');
+
+            let filtered = [...allMatches];
+            if (filterType === 'group') {
+                filtered = filtered.filter(m => m.type === 'group');
+            } else if (filterType === 'knockout') {
+                filtered = filtered.filter(m => m.type === 'knockout');
+            }
+
+            if (currentSort === 'date') {
+                filtered.sort((a, b) => parseDate(a.date, a.time) - parseDate(b.date, b.time));
+            } else {
+                filtered.sort((a, b) => {
+                    if (a.group !== b.group) return a.group.localeCompare(b.group);
+                    return parseDate(a.date, a.time) - parseDate(b.date, b.time);
+                });
+            }
+
+            renderMatchList(filtered);
+        }
+
+        // ===== APPLY FILTER =====
+        function applyFilter(matches) {
+            let filtered = matches;
+            if (currentFilter === 'group') {
+                filtered = filtered.filter(m => m.type === 'group');
+            } else if (currentFilter === 'knockout') {
+                filtered = filtered.filter(m => m.type === 'knockout');
+            }
+            renderMatchList(filtered);
+        }
+
+        // ===== SEARCH MATCHES =====
+        function searchMatches() {
+            const query = document.getElementById('matchSearch').value.toLowerCase();
+            let filtered = allMatches.filter(match => {
+                return match.team1.toLowerCase().includes(query) ||
+                       match.team2.toLowerCase().includes(query) ||
+                       match.venue.toLowerCase().includes(query) ||
+                       match.date.toLowerCase().includes(query) ||
+                       match.group.toLowerCase().includes(query);
+            });
+
+            if (currentSort === 'date') {
+                filtered.sort((a, b) => parseDate(a.date, a.time) - parseDate(b.date, b.time));
+            } else {
+                filtered.sort((a, b) => {
+                    if (a.group !== b.group) return a.group.localeCompare(b.group);
+                    return parseDate(a.date, a.time) - parseDate(b.date, b.time);
+                });
+            }
+
+            if (currentFilter === 'group') {
+                filtered = filtered.filter(m => m.type === 'group');
+            } else if (currentFilter === 'knockout') {
+                filtered = filtered.filter(m => m.type === 'knockout');
+            }
+
+            renderMatchList(filtered);
+        }
+
+        // ===== INITIAL RENDER =====
+        const initialMatches = [...allMatches].sort((a, b) => parseDate(a.date, a.time) - parseDate(b.date, b.time));
+        renderMatchList(initialMatches);
+
+        // ===== SMOOTH SCROLL FOR NAV =====
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Update active nav
+                    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // ===== UPDATE ACTIVE NAV ON SCROLL =====
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ===== MOBILE MENU =====
+        function toggleMobileMenu() {
+            const nav = document.querySelector('nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.position = 'absolute';
+                nav.style.top = '70px';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = 'rgba(11, 17, 32, 0.98)';
+                nav.style.flexDirection = 'column';
+                nav.style.padding = '2rem';
+                nav.style.backdropFilter = 'blur(20px)';
+                nav.style.borderBottom = '1px solid var(--card-border)';
+            }
+        }
+
+        // ===== KEYBOARD SHORTCUTS =====
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+                e.preventDefault();
+                document.getElementById('matchSearch').focus();
+            }
+            if (e.key === 'Escape') {
+                document.getElementById('matchSearch').blur();
+                document.getElementById('matchSearch').value = '';
+                searchMatches();
+            }
+        });
+
+        // ===== TOOLTIP INIT =====
+        document.querySelectorAll('[data-tooltip]').forEach(el => {
+            el.classList.add('tooltip');
+        });
+    </script>
+</body>
+</html>
