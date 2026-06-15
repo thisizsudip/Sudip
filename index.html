@@ -1494,8 +1494,8 @@
                     </div>
                 </div>
                 <div class="group-matches">
-                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">7:00 AM</span><span class="match-teams">Iran <span class="match-vs">vs</span> New Zealand</span><span class="match-venue">SoFi Stadium</span></div>
                     <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">1:00 AM</span><span class="match-teams">Belgium <span class="match-vs">vs</span> Egypt</span><span class="match-venue">Lumen Field</span></div>
+                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">7:00 AM</span><span class="match-teams">Iran <span class="match-vs">vs</span> New Zealand</span><span class="match-venue">SoFi Stadium</span></div>
                     <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">1:00 AM</span><span class="match-teams">Belgium <span class="match-vs">vs</span> Iran</span><span class="match-venue">SoFi Stadium</span></div>
                     <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">7:00 AM</span><span class="match-teams">New Zealand <span class="match-vs">vs</span> Egypt</span><span class="match-venue">BC Place</span></div>
                     <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">9:00 AM</span><span class="match-teams">Egypt <span class="match-vs">vs</span> Iran</span><span class="match-venue">Lumen Field</span></div>
@@ -1515,8 +1515,8 @@
                     </div>
                 </div>
                 <div class="group-matches">
-                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">10:00 AM</span><span class="match-teams">Spain <span class="match-vs">vs</span> Cape Verde</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
                     <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">4:00 AM</span><span class="match-teams">Saudi Arabia <span class="match-vs">vs</span> Uruguay</span><span class="match-venue">Hard Rock Stadium</span></div>
+                    <div class="match-row"><span class="match-date">Jun 16</span><span class="match-time">10:00 AM</span><span class="match-teams">Spain <span class="match-vs">vs</span> Cape Verde</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
                     <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">10:00 AM</span><span class="match-teams">Spain <span class="match-vs">vs</span> Saudi Arabia</span><span class="match-venue">Mercedes-Benz Stadium</span></div>
                     <div class="match-row"><span class="match-date">Jun 22</span><span class="match-time">4:00 AM</span><span class="match-teams">Uruguay <span class="match-vs">vs</span> Cape Verde</span><span class="match-venue">Hard Rock Stadium</span></div>
                     <div class="match-row"><span class="match-date">Jun 27</span><span class="match-time">6:00 AM</span><span class="match-teams">Cape Verde <span class="match-vs">vs</span> Saudi Arabia</span><span class="match-venue">NRG Stadium</span></div>
@@ -1852,14 +1852,14 @@
         </div>
         <div class="timeline">
             <div class="timeline-item reveal">
-                <div class="timeline-date">June 11, 2026</div>
+                <div class="timeline-date">June 12, 2026 (BST)</div>
                 <div class="timeline-title">Opening Ceremony &amp; First Match</div>
-                <div class="timeline-desc">Mexico vs South Africa at Estadio Azteca, Mexico City</div>
+                <div class="timeline-desc">Mexico vs South Africa at Estadio Azteca, Mexico City — kicks off at 1:00 AM BST (June 11, 1:00 PM CST local time)</div>
             </div>
             <div class="timeline-item reveal">
-                <div class="timeline-date">June 11 - June 27</div>
+                <div class="timeline-date">June 12 - June 28 (BST)</div>
                 <div class="timeline-title">Group Stage</div>
-                <div class="timeline-desc">72 matches across 12 groups. Every team plays 3 matches.</div>
+                <div class="timeline-desc">72 matches across 12 groups. Every team plays 3 matches. (Local dates: June 11 – June 27)</div>
             </div>
             <div class="timeline-item reveal">
                 <div class="timeline-date">June 28 - July 3</div>
@@ -2227,9 +2227,16 @@
         // ===== PARSE DATE =====
         function parseDate(dateStr, timeStr) {
             const monthMap = { 'Jun': 5, 'Jul': 6 };
-            const month = monthMap[dateStr.split(' ')[0]];
-            const day = parseInt(dateStr.split(' ')[1]);
-            const [hours, minutes] = timeStr.replace(' AM', '').replace(' PM', '').split(':').map(Number);
+            const parts = dateStr.split(' ');
+            const month = monthMap[parts[0]];
+            const day = parseInt(parts[1]);
+            const isPM = timeStr.includes('PM');
+            const isAM = timeStr.includes('AM');
+            const [hoursStr, minutesStr] = timeStr.replace(' AM', '').replace(' PM', '').split(':');
+            let hours = parseInt(hoursStr);
+            const minutes = parseInt(minutesStr);
+            if (isPM && hours !== 12) hours += 12;
+            if (isAM && hours === 12) hours = 0;
             return new Date(2026, month, day, hours, minutes);
         }
 
